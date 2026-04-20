@@ -1,5 +1,5 @@
 ## website description
-The Sovereign Barber is a modern barbershop committed to delivering premium grooming services. It includes all types of grooming services (haircuts, beardtrimming, hair dyes etc.)
+The Sovereign Barber is a modern barbershop committed to delivering premium grooming services. It includes all types of grooming services (haircuts, beardtrimming, hair dyes etc.). Our website will be a digital hub where customers can explore our services, discover what we offer and easily book appointments.
 
 ## Features-
 - Home page
@@ -31,12 +31,18 @@ Home Page
             - Social links
 
 ## changelog 
-- changed nav font-size to large on all pages
+- changed a picture under homepage
 - added 3 images under home page
-- changed the 'h3' element to 'p' element on the about us page
+- changed a picture under gallery page
 - added an image under about us page
 - added address under contact page
 
 ## References
+Proposal 1:
+- OpenAI.(2026).ChatGPT(March 26 version)https://chatgpt.com/c/69c163a9-0f64-8328-a8ad-f6a221139b4a
+- OpenAI.(2026).ChatGPT(April 19 version)https://chatgpt.com/c/69e4fa21-29cc-83ea-91e2-53a22cb3f727
+
+Proposal 2:
+- OpenAI.(2026).ChatGPT(April 8 version)https://chatgpt.com/c/69d6af37-f938-8327-a394-a9942cfc7417
 
 
