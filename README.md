@@ -1,2 +1,0 @@
-# sovereign website
-barbershop
