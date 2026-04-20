@@ -12,10 +12,23 @@ The Sovereign Barber is a modern barbershop committed to delivering premium groo
 ## Structure 
 
 Home Page
-- About Us 
+- About Us- Our story
+          - Mission and Values
+          - Meet Our Barber
 
+- Services- Haircuts
+          - Styling
+          - Beard trimming
 
+- Bookings- Select time and date
 
+- Gallery- Hairstyles
+         - Beardwork
+
+- Contact Us- Contact form
+            - Location Map
+            - Phone and Email
+            - Social links
 
 ## changelog 
 - changed nav font-size to large on all pages
