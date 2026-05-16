@@ -1,0 +1,37 @@
+/* Shared styles used by bookings.html.
+   Note: this project primarily styles via /style.css; keep this minimal to avoid conflicts. */
+
+/* Ensure the page uses the same base layout as other pages */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.site-header {
+  text-align: center;
+}
+
+.site-nav {
+  text-align: center;
+  font-size: large;
+}
+
+.site-nav a {
+  margin: 0 6px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.bookings-title,
+.bookings-lead {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
