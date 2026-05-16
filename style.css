@@ -18,7 +18,7 @@ body{
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .nav{
@@ -58,14 +58,14 @@ body{
     margin: 0;
 }
 
-.site-header{
+.header{
     background-color: black;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-.site-nav{
+.nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,6 +76,26 @@ body{
 .nav a{
     color: inherit;
     text-decoration: none;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: none;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.button:hover{
+    background-color: white;
+    color: rgb(233, 167, 54) ;
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
 }
 
 .site-main{
