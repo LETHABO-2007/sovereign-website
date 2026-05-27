@@ -78,10 +78,22 @@ body{
     text-decoration: none;
 }
 
+.home{
+    margin: 20px;
+}
+
+.bookings{
+    color: black;
+    margin: 20px;
+    text-align: center
+}
+
+
 .button{
     background-color: black;
     color: white;
     border: none;
+    margin: 20px;
     align-items: center;
     padding: 10px 20px;
     font-size: larger;
@@ -110,7 +122,6 @@ body{
     text-align: center;
 }
 
-/* Home hero */
 .page--home{
     min-height: 100vh;
 }
@@ -121,4 +132,6 @@ body{
     background-position: center;
     height: 100vh;
 }
+
+
 
