@@ -47,17 +47,6 @@ body{
     transition: all 0.5s ease;
 }
 
-
-/* Old compatibility class */
-.body{
-    margin: 0;
-}
-
-/* Layout classes */
-.page{
-    margin: 0;
-}
-
 .header{
     background-color: black;
     color: white;
@@ -84,10 +73,66 @@ body{
 
 .bookings{
     color: black;
-    margin: 20px;
     text-align: center
 }
 
+.details{
+    font-size: larger;
+    padding: 20px;
+}
+
+input::placeholder{
+    color: rgb(233, 167, 54);
+    text-align: center;
+}
+
+.details input:hover{
+     transform: scale(1.1);
+     transition: all 0.5s ease;
+}
+
+.details input{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.select{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.select:hover{
+     color: rgb(233, 167, 54);
+     transform: scale(1.1);
+     transition: all 0.5s ease;
+}
+
+.button2{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.button2:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
 
 .button{
     background-color: black;
@@ -99,12 +144,13 @@ body{
     font-size: larger;
     cursor: pointer;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+
 }
 
 .button:hover{
     background-color: white;
-    color: rgb(233, 167, 54) ;
+    color: rgb(233, 167, 54);
     border-radius: 8px;
     transform: scale(1.1);
     transition: all 0.5s ease;
