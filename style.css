@@ -219,7 +219,7 @@ input::placeholder{
 }
 
 .about img{
-    width: 15rem;
+    width: 20rem;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -232,7 +232,7 @@ input::placeholder{
 }
 
 .paragraph{
-    padding: 70px;
+    padding: 50px;
 }
 
 .services{
