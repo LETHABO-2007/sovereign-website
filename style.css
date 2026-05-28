@@ -242,6 +242,13 @@ input::placeholder{
     text-align: center;
 }
 
+.pictures{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
 .pictures img{
     padding: 5px;
     margin: 10px;
