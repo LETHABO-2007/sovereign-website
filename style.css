@@ -121,8 +121,9 @@ input::placeholder{
 }
 
 .details input:hover{
-     transform: scale(1.1);
-     transition: all 0.5s ease;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: 2px solid rgb(233, 167, 54);
 }
 
 .details input{
@@ -294,7 +295,7 @@ input::placeholder{
     text-align: center;
 }
 
-.details{
+.details1{
     font-size: larger;
     text-align: center;
     padding: 20px;
