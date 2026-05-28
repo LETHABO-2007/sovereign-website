@@ -190,7 +190,6 @@ input::placeholder{
 
 .about h2{
     text-align: center;
-    
 }
 
 .about2 h4 {
@@ -238,5 +237,45 @@ input::placeholder{
     height: 100vh;
 }
 
+.contact1{
+    text-align: center;
+}
 
+.contact img{
+    width: 40rem;
+    border-radius: 15px;
+    margin: 20px;
+    display: flex;
+    
+}
+.contact p{
+    font-size: larger;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.socials a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 50px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials a:hover{
+    color: rgb(233, 167, 54);
+    transition: all 0.3s ease;
+   transform: scale(1.1);
+}
 
