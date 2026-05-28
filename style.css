@@ -177,6 +177,34 @@ input::placeholder{
     padding: 20px;
 }
 
+.about{
+    font-size: larger;
+    padding: 50px;
+    display: flex;
+    flex-direction:column
+}
+
+.about2{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.about h2{
+    text-align: center;
+    
+}
+
+.about2 h4 {
+    align-self: center;
+}
+
+.about img{
+    width: 15rem;
+    border-radius: 15px;
+}
+
 .services{
     font-size: larger;
     text-align: center;
