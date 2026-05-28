@@ -52,7 +52,7 @@ body{
     transition: all 0.5s ease;
 }
 
-/* Links row */
+
 .nav{
     display: flex;
     align-items: center;
@@ -94,6 +94,15 @@ body{
 
 .home{
     margin: 20px;
+}
+
+.home h2{
+    text-align: center;
+}
+
+.home h1{
+    text-align: center;
+    padding: 20px;
 }
 
 
@@ -205,10 +214,6 @@ input::placeholder{
     gap: 20px;
 }
 
-.about h2{
-    text-align: center;
-}
-
 .about2 h4 {
     align-self: center;
 }
@@ -216,6 +221,18 @@ input::placeholder{
 .about img{
     width: 15rem;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.founder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paragraph{
+    padding: 70px;
 }
 
 .services{
