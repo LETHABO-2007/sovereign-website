@@ -201,7 +201,7 @@ input::placeholder{
     font-size: larger;
     padding: 50px;
     display: flex;
-    flex-direction:column
+    flex-direction:column;
 }
 
 .about2{
@@ -279,19 +279,38 @@ input::placeholder{
     text-align: center;
 }
 
-.contact img{
-    width: 40rem;
+.contact2{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.contact2 img{
+    width: 80rem;
     border-radius: 15px;
     margin: 20px;
-    display: flex;
-    
 }
-.contact p{
+
+.contactname{
+    text-align: center;
+}
+
+.details{
     font-size: larger;
+    text-align: center;
+    padding: 20px;
     justify-content: center;
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.follow{
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .socials a{
@@ -308,12 +327,20 @@ input::placeholder{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;
 }
 
 .socials a:hover{
     color: rgb(233, 167, 54);
     transition: all 0.3s ease;
    transform: scale(1.1);
+}
+
+.socials p{
+    font-size: larger;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
