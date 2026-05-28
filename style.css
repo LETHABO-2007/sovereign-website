@@ -174,13 +174,11 @@ input::placeholder{
     color: white;
     border: none;
     margin: 20px;
-    align-items: center;
-    padding: 10px 20px;
+    padding: 20px;
     font-size: larger;
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.5s ease;
-
 }
 
 .button:hover{
