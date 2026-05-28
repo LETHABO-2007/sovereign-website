@@ -166,9 +166,6 @@ input::placeholder{
     transition: all 0.5s ease;
 }
 
-.site-main{
-    padding: 0 16px;
-}
 
 .footer{
     background-color: black;
@@ -209,6 +206,29 @@ input::placeholder{
     font-size: larger;
     text-align: center;
     padding: 50px;
+}
+
+.gallery{
+    text-align: center;
+}
+
+.pictures img{
+    padding: 5px;
+    margin: 10px;
+    align-items: center;
+    border-radius: 20px;
+    width: 25rem;
+    transition: all 0.5s ease;
+    margin: 20px;
+    border: 5px solid white;
+    cursor: pointer;
+
+}
+
+.pictures img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: 5px solid rgb(233, 167, 54);
 }
 
 .home{
