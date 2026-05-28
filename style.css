@@ -1,11 +1,15 @@
 /* Base reset */
 *{
-    box-sizing: border-box;
 }
 
 body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    
+}
+.logo{
+    width: 7rem;
+    border-radius: 20px;
+    flex-direction: row;
 }
 
 .navbar a:hover{
@@ -16,6 +20,7 @@ body{
 .navbar a{
     color: white;
     text-decoration: none;
+    text-align: center;
     padding: 8px 16px;
     border-radius: 4px;
     transition: all 0.5s ease;
@@ -34,6 +39,7 @@ body{
 .nav a{
     color: white;
     text-decoration: none;
+    text-align: center;
     padding: 8px 16px;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -51,6 +57,10 @@ body{
     background-color: black;
     color: white;
     padding: 20px;
+    border-radius: 15px;
+}
+
+.header h1{
     text-align: center;
 }
 
@@ -160,19 +170,20 @@ input::placeholder{
     padding: 0 16px;
 }
 
-.site-section{
+.footer{
+    background-color: black;
+    color: white;
     text-align: center;
+    padding: 20px;
 }
 
-.page-title{
+.services{
+    font-size: larger;
     text-align: center;
+    padding: 50px;
 }
 
-.page--home{
-    min-height: 100vh;
-}
-
-.page--home .home{
+.home{
     background-image: url(assets/images/IMG-20260321-WA0019.jpg);
     background-size: cover;
     background-position: center;
