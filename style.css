@@ -360,6 +360,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transform: scale(0.8);
 }
 
 .logoNAME h1{
