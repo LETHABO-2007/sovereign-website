@@ -351,3 +351,1094 @@ input::placeholder{
     gap: 20px;
 }
 
+@media screen and (max-width: 1300px){
+body{
+    font-family: Arial, sans-serif;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoNAME h1{
+    margin: 0;
+    line-height: 1;
+}
+
+.logo{
+    width: 10rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.logo img{
+    width: 100%;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.navbar a:hover{
+    color: rgb(233, 167, 54);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    font-size: larger;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.header h1{
+    text-align: center;
+}
+
+.home{
+    margin: 20px;
+}
+
+.home h2{
+    text-align: center;
+}
+
+.home h1{
+    text-align: center;
+    padding: 20px;
+}
+
+
+.bookings{
+    color: black;
+    text-align: center
+}
+
+.details{
+    font-size: larger;
+    padding: 20px;
+}
+
+input::placeholder{
+    color: rgb(233, 167, 54);
+    text-align: center;
+}
+
+.details input:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: 2px solid rgb(233, 167, 54);
+}
+
+.details input{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.select{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.select:hover{
+     color: rgb(233, 167, 54);
+     transform: scale(1.1);
+     transition: all 0.5s ease;
+}
+
+.button2{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.button2:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.button:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+.about{
+    font-size: larger;
+    padding: 50px;
+    display: flex;
+    flex-direction:column;
+}
+
+.about2{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.about2 h4 {
+    align-self: center;
+}
+
+.about img{
+    width: 20rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.founder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paragraph{
+    padding: 50px;
+}
+
+.services{
+    font-size: larger;
+    text-align: center;
+    padding: 50px;
+}
+
+.gallery{
+    text-align: center;
+}
+
+.pictures{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2px;
+}
+
+.pictures img{
+    padding: 2px;
+    margin: 10px;
+    align-items: center;
+    border-radius: 20px;
+    width: 20rem;
+    transition: all 0.5s ease;
+    margin: 20px;
+    border: 5px solid white;
+    cursor: pointer;
+
+}
+
+.pictures img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: 5px solid rgb(233, 167, 54);
+}
+
+.home{
+    background-image: url(assets/images/IMG-20260321-WA0019.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.contact1{
+    text-align: center;
+}
+
+.contact2{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.contact2 img{
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 20px;
+    border: 5px solid white;
+    width: 60rem;
+}
+
+.contactname{
+    text-align: center;
+}
+
+.details1{
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.follow{
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socials a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 50px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.socials a:hover{
+    color: rgb(233, 167, 54);
+    transition: all 0.3s ease;
+   transform: scale(1.1);
+}
+
+.socials p{
+    font-size: larger;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+}
+
+@media screen and (max-width: 900px){
+    body{
+    font-family: Arial, sans-serif;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.logoNAME h1{
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo{
+    width: 15rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    align-self: center;;
+}
+
+.logo img{
+    width: 8rem;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.navbar a:hover{
+    color: rgb(233, 167, 54);
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+    font-size: 5px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.nav a:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+.header h1{
+    text-align: center;
+}
+
+.home{
+    margin: 20px;
+}
+
+.home h2{
+    text-align: center;
+}
+
+.home h1{
+    text-align: center;
+    padding: 20px;
+}
+
+
+.bookings{
+    color: black;
+    text-align: center
+}
+
+.details{
+    font-size: larger;
+    padding: 20px;
+}
+
+input::placeholder{
+    color: rgb(233, 167, 54);
+    text-align: center;
+}
+
+.details input:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: 2px solid rgb(233, 167, 54);
+}
+
+.details input{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.select{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.select:hover{
+     color: rgb(233, 167, 54);
+     transform: scale(1.1);
+     transition: all 0.5s ease;
+}
+
+.button2{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.button2:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.button:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+.about{
+    font-size: larger;
+    padding: 2px;
+    display: flex;
+    flex-direction:column;
+}
+
+.about2{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.about img{
+    width: 20rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.founder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paragraph{
+    padding: 10px;
+}
+
+.services{
+    font-size: larger;
+    text-align: center;
+    padding: 50px;
+}
+
+.gallery{
+    text-align: center;
+}
+
+.pictures{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pictures img{
+    padding: 5px;
+    margin: 10px;
+    align-items: center;
+    border-radius: 20px;
+    width: 15rem;
+    transition: all 0.5s ease;
+    margin: 20px;
+    border: 5px solid white;
+    cursor: pointer;
+
+}
+
+.pictures img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: 5px solid rgb(233, 167, 54);
+}
+
+
+
+.home img{
+    width: 100%;
+
+}
+
+.contact1{
+    text-align: center;
+}
+
+.contact2{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.contact2 img{
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 20px;
+    border: 5px solid white;
+    width: 80rem;
+}
+
+.contactname{
+    text-align: center;
+}
+
+.details1{
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.follow{
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socials a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 50px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.socials a:hover{
+    color: rgb(233, 167, 54);
+    transition: all 0.3s ease;
+   transform: scale(1.1);
+}
+
+.socials p{
+    font-size: larger;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+}
+
+@media screen and (max-width: 600px){
+.body{
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 4px;
+}
+
+.logoNAME h1{
+    margin: 0;
+    line-height: 1;
+}
+
+.logo{
+    width: 2rem;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    font-size: 0.5rem;
+}
+
+.logo img{
+    width: 50px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.navbar a:hover{
+    color: rgb(233, 167, 54);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    font-size: larger;
+    text-align: center;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    padding: 1px;
+    border-radius: 15px;
+}
+
+.header h1{
+    text-align: center;
+}
+
+.home{
+    margin: 2px;
+}
+.home{
+    background-image: url(assets/images/IMG-20260321-WA0019.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+.home h2{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.home h1{
+    text-align: center;
+    padding: 2px;
+}
+
+.bookings h1{
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;   
+}
+
+.bookings h3{
+    color: black;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.details{
+    font-size: calc(1rem + 1vw);
+    padding: 20px;
+}
+
+input::placeholder{
+    color: rgb(233, 167, 54);
+    text-align: center;
+}
+
+.details input:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: 2px solid rgb(233, 167, 54);
+}
+
+.details input{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.select{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.select:hover{
+     color: rgb(233, 167, 54);
+     transform: scale(1.1);
+     transition: all 0.5s ease;
+}
+
+.button2{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.button2:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.button:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 5px;
+    padding: 1px;
+    border-radius: 15px;
+
+}
+
+.about{
+    font-size: larger;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about2{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.about2 h4 {
+    align-self: center;
+}
+
+.about img{
+    width: 10rem;
+    height: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.founder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.founder h3{
+    font-size: 9px;
+    text-align: center;
+}
+
+.founder h4{
+    font-size: 7px;
+}
+
+.paragraph{
+    padding: 1px;
+    font-size: 10px;
+}
+
+.services{
+    font-size: 12px;
+    text-align: center;
+    padding: 50px;
+}
+
+.gallery{
+    text-align: center;
+}
+
+.pictures{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pictures img{
+    padding: 6px;
+    margin: 1px;
+    align-items: center;
+    border-radius: 20px;
+    width: 5rem;
+    transition: all 0.5s ease;
+    margin: 1px;
+    border: 5px solid white;
+    cursor: pointer;
+
+}
+
+.pictures img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: 5px solid rgb(233, 167, 54);
+}
+
+.home{
+    background-image: url(assets/images/IMG-20260321-WA0019.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.home img{
+    width: 20rem;
+    height: auto;
+}
+
+.contact1{
+    text-align: center;
+}
+
+.contact2{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.contact2 img{
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 20px;
+    border: 5px solid white;
+    width: 80rem;
+}
+
+.contactname{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.details1{
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.follow{
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socials a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 50px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.socials a{
+    font-size: 30px;
+}
+
+.socials a:hover{
+    color: rgb(233, 167, 54);
+    transition: all 0.3s ease;
+   transform: scale(1.1);
+}
+
+.socials p{
+    font-size: 1.2rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+}
+   
