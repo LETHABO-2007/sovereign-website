@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheSovereignBarber Home</title>
+    <title>TheSovereignBarber About Us</title>
      
      <link rel="icon" type="image/png" href="assets/images/IMG-20260321-WA0019.jpg">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="page page--home">
 
-<header class="header">
-         
+<header class="header">    
+
         <div class="navbar">
 
             <div class="logo">
@@ -25,10 +25,8 @@
                   <a href="index.html">The Sovereign Barber</a>
                 </h1>
             </div>
-           
-            
 
-        <div>
+        <div class="nav">
             <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -38,13 +36,11 @@
          </nav>
         </div>
 
-        </div>
-    </header>
+    </div>
+</header>
 
-
-    <main class="bookings">
-
-     <section>
+<main class="bookings-container">
+    <section class="bookings">
 
         <div>
             <h1>Book Your Appointment</h1>
@@ -56,52 +52,85 @@
              We look forward to serving you!
         </h3>
 
-        <form class="details">
-                <div>
-                    <h5>NAME</h5>
-                    <input type="text" placeholder="Enter Your Name">
-                </div>
-
-                <div>
-                    <h5>EMAIL ADDRESS</h5>
-                    <input type="email" placeholder="Enter Your Email Address">
-                </div>
-
-                    <div>
-                        <h5>PHONE NUMBER</h5>
-                        <input type="tel" placeholder="Enter Your Phone Number">
+         <form id="bookingForm" autocomplete="off">
+                <div class="form-group">
+                    <label for="customerName">Full Name</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon"></span>
+                        <input type="text" id="customerName" placeholder="Enter Full Name" required>
                     </div>
-
-                    <div >
-                        <h5>APPOINTMENT TIME</h5>
-
-                        <div>
-                            <select class="select">
-                                <option value="">SELECT TIME</option>
-                                <option value="9:00 AM">9:00 AM</option>
-                                <option value="10:00 AM">10:00 AM</option>
-                                <option value="11:00 AM">11:00 AM</option>
-                                <option value="12:00 PM">12:00 PM</option>
-                                <option value="1:00 PM">1:00 PM</option>
-                                <option value="2:00 PM">2:00 PM</option>
-                                <option value="3:00 PM">3:00 PM</option>
-                                <option value="4:00 PM">4:00 PM</option>
-                                <option value="5:00 PM">5:00 PM</option>
-                                <option value="6:00 PM">6:00 PM</option>
-                                <option value="7:00 PM">7:00 PM</option>
-                                <option value="8:00 PM">8:00 PM</option>
-                            </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon"></span>
+                        <input type="tel" id="customerPhone" placeholder="Enter Phone Number" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Date</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon"></span>
+                            <input type="date" id="appointmentDate" required>
                         </div>
                     </div>
-
-                    <br>
-                    <button class="button2">
-                        SUBMIT
-                    </button>
+                    <div class="form-group">
+                        <label for="appointmentTime">Time</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon"></span>
+                            <input type="time" id="appointmentTime" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Confirm Booking</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </form>
+            <div id="successMessage" class="success-msg hidden"></div>
+            
+            <div class="admin-link-wrapper">
+                <button id="goToAdminBtn" class="link-btn">Business Owner Portal</button>
             </div>
-        </form>
-     </section>
-    </main>
+        </div>
+
+        <div id="adminView" class="hidden">
+            <div class="admin-header">
+                <div>
+                    <h2>Business Dashboard</h2>
+                    <p class="subtitle">Manage incoming client appointments</p>
+                </div>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+            
+            <form id="adminLoginForm" autocomplete="off">
+                <div class="form-group">
+                    <label for="adminPassword">Enter Master Security Password</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon"></span>
+                        <input type="password" id="adminPassword" placeholder="••••••••" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Unlock Dashboard</button>
+                <button type="button" id="backToBookingBtn" class="secondary-btn">Return to Booking Form</button>
+                <div id="loginError" class="error-msg hidden"></div>
+            </form>
+
+            <div id="recordsContainer" class="hidden">
+                <div class="records-meta">
+                    <span class="badge" id="bookingCount">0 Appointments</span>
+                </div>
+                <ul id="recordsList" class="records-list"></ul>
+            </div>
+            <script src="index.js"></script>
+    </section>
+    
+
+</main>
 
    <footer class="footer">
         <div>
@@ -124,8 +153,8 @@
              </p>
             </div>
     </footer>
-</body>   
-
-
+    
+    
+</body>  
 
 </html>

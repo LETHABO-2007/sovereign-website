@@ -83,7 +83,330 @@ body{
     color: white;
     padding: 20px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.bookings{
+    color: black;
+    text-align: center
+}
+
+.bookings-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+:root {
+    --primary:rgb(233, 167, 54) ;         /* Elegant Indigo */
+    --primary-hover: rgb(233, 167, 54);
+    --primary-light: #eeebff;
+    --background: #f8fafc;      /* Pure clean slate background */
+    --card-bg: #ffffff;
+    --text-main: #0f172a;       /* Deep obsidian text */
+    --text-muted: #000000;     /* Slate grey */
+    --border: rgb(241, 193, 109);
+    --border-hover: #cbd5e1;
+    --success: #10b981;         /* Vivid Emerald */
+    --success-bg: #f0fdf4;
+    --danger: #ef4444;          /* Crimson red */
+    --danger-bg: #fef2f2;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- Form Architectures --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+/* Input Fields with Icon Integrations */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+input {
+    font-family: inherit;
+    width: 100%;
+    padding: 13px 14px 13px 44px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+/* --- Custom Action Buttons --- */
+button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.submit-btn:hover {
+    background-color: rgb(233, 167, 54);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+}
+
+.secondary-btn:hover {
+    background: #f1f5f9;
+    color: var(--text-main);
+    border-color: var(--border-hover);
+}
+
+/* --- Feedback Banners --- */
+.success-msg {
+    color: white;
+    background-color: var(--success);
+    border: 1px solid var(--success);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    animation: scaleIn 0.25s ease;
+}
+
+.error-msg {
+    color: var(--danger);
+    background-color: var(--danger-bg);
+    border: 1px solid var(--danger);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 16px;
+    animation: scaleIn 0.25s ease;
+}
+
+/* --- Business Owner Navigation Gateway --- */
+.admin-link-wrapper {
+    margin-top: 32px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.link-btn:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* --- Administrative Layout Engine --- */
+
+.logout-btn {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    font-size: 0.8rem;
+}
+
+.logout-btn:hover {
+    background-color: #e2e8f0;
+    color: var(--text-main);
+}
+
+.records-meta {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.badge {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+/* Records List Structuring */
+.records-list {
+    list-style: none;
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.records-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.records-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.records-list li {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 0.3s ease;
+}
+
+.booking-info strong {
+    display: block;
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.booking-info div {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Row Record Actions */
+.delete-btn {
+    background-color: #ffffff;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.delete-btn:hover {
+    background-color: var(--danger);
+    color: #ffffff;
+    border-color: var(--danger);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.18);
+}
+
+.no-records {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Layout Utility Extensions --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- Animations --- */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
 
 .header h1{
     text-align: center;
@@ -100,12 +423,6 @@ body{
 .home h1{
     text-align: center;
     padding: 20px;
-}
-
-
-.bookings{
-    color: black;
-    text-align: center
 }
 
 .details{
