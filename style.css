@@ -120,7 +120,7 @@ body{
     --shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
 }
 
-h2 {
+.h2 {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -128,7 +128,7 @@ h2 {
     margin-bottom: 6px;
 }
 
-.subtitle {
+.subtitle{
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.5;
@@ -138,19 +138,19 @@ h2 {
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 22px;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .form-row {
     display: flex;
-    gap: 16px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
 }
 
-.form-row .form-group {
-    flex: 1;
-}
-
-label {
+.label {
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -177,7 +177,8 @@ label {
 input {
     font-family: inherit;
     width: 100%;
-    padding: 13px 14px 13px 44px;
+    position: relative;
+    padding: 13px 14px 13px 20px;
     font-size: 0.95rem;
     color: var(--text-main);
     background-color: #ffffff;
@@ -185,6 +186,7 @@ input {
     border-radius: var(--radius-md);
     outline: none;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: matrix();
 }
 
 input:focus {
@@ -197,7 +199,7 @@ input::placeholder {
 }
 
 /* --- Custom Action Buttons --- */
-button {
+.button {
     font-family: inherit;
     font-size: 0.95rem;
     font-weight: 600;
@@ -210,8 +212,10 @@ button {
 }
 
 .submit-btn {
-    width: 100%;
+    width: 20%;
     padding: 14px;
+    border-radius: 15px;
+    font-size: large;
     background-color: black;
     color: white;
     border: none;
@@ -241,8 +245,8 @@ button {
 
 /* --- Feedback Banners --- */
 .success-msg {
-    color: white;
-    background-color: var(--success);
+    color: var(--success);
+    background-color: rgb(173, 250, 173);
     border: 1px solid var(--success);
     padding: 14px;
     border-radius: var(--radius-md);
@@ -277,6 +281,7 @@ button {
 .link-btn {
     background: none;
     border: none;
+    font-size: 5px;
     color: var(--text-muted);
     font-size: 0.85rem;
     font-weight: 500;
