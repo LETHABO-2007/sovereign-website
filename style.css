@@ -17,7 +17,7 @@ body{
 }
 
 .logo{
-    width: 15rem;
+    width: 9rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -81,7 +81,7 @@ body{
 .header{
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 1px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
