@@ -561,6 +561,16 @@ input::placeholder{
     padding: 50px;
 }
 
+.services h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.services p{
+    text-align: center;
+    padding: 20px;
+}
+
 .gallery{
     text-align: center;
     padding: 20px;
