@@ -1,0 +1,114 @@
+/* Gallery Lightbox (fullscreen dark overlay) */
+.gl-lightbox[aria-hidden="true"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gl-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.86);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: opacity 160ms ease;
+}
+
+.gl-lightbox__dialog {
+  position: relative;
+  width: min(980px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gl-lightbox__img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 160px);
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.gl-lightbox__caption {
+  width: 100%;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gl-lightbox__close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gl-lightbox__close:hover {
+  border-color: rgba(233, 167, 54, 0.9);
+  box-shadow: 0 0 0 4px rgba(233, 167, 54, 0.18);
+}
+
+.gl-lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  user-select: none;
+}
+
+.gl-lightbox__nav--prev {
+  left: -68px;
+}
+
+.gl-lightbox__nav--next {
+  right: -68px;
+}
+
+.gl-lightbox__nav:hover {
+  border-color: rgba(233, 167, 54, 0.9);
+  box-shadow: 0 0 0 4px rgba(233, 167, 54, 0.18);
+}
+
+@media (max-width: 800px) {
+  .gl-lightbox__nav--prev {
+    left: 8px;
+  }
+  .gl-lightbox__nav--next {
+    right: 8px;
+  }
+  .gl-lightbox {
+    padding: 14px;
+  }
+}
+

@@ -176,62 +176,6 @@ function escapeHtml(string) {
     return div.innerHTML;
 }
 
-// --- LIGHTBOX GALLERY ---
- (function () {
-    const lightbox = document.getElementById('glLightbox');
-    const lightboxImg = document.getElementById('glLightboxImg');
-    const closeBtn = document.getElementById('glLightboxClose');
+// Gallery lightbox is implemented in a separate file (gallery-lightbox.js)
+// so that it doesn't affect booking/admin pages.
 
-    function openLightboxFromImg(img) {
-      const src = img.getAttribute('src');
-      if (!src) return;
-
-      lightboxImg.src = src;
-      lightboxImg.alt = img.getAttribute('alt') || 'Gallery image';
-
-      lightbox.classList.add('is-open');
-      lightbox.setAttribute('aria-hidden', 'false');
-      closeBtn.focus();
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('is-open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      lightboxImg.src = '';
-    }
-
-    // Click on any gallery thumbnail
-    const thumbs = document.querySelectorAll('.pictures img');
-    thumbs.forEach((thumb) => {
-      // Ensure pointer cursor is used by existing CSS; add click behavior only.
-      thumb.addEventListener('click', function () {
-        openLightboxFromImg(thumb);
-      });
-
-      // Accessibility: allow keyboard activation
-      if (!thumb.hasAttribute('tabindex')) {
-        thumb.setAttribute('tabindex', '0');
-      }
-      thumb.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openLightboxFromImg(thumb);
-        }
-      });
-    });
-
-    // Close button
-    closeBtn.addEventListener('click', closeLightbox);
-
-    // Close when clicking overlay
-    lightbox.addEventListener('click', function (e) {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    // Close on ESC
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
-        closeLightbox();
-      }
-    });
-  })();

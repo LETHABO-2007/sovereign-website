@@ -626,7 +626,7 @@ input::placeholder{
     padding: 12px;
     margin: 16px;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 2rem;
     width: 25rem;
     transition: all 0.5s ease;
     margin: 20px;
@@ -2787,21 +2787,20 @@ input::placeholder{
 }
 
 .about2 h3{
-    font-size: 11px;
+    font-size: 8px;
 }
 
-.about2 h4 {
+.about2 h4{
     align-self: center;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .about img{
-    width: 10rem;
+    width: 7rem;
     border-radius: 15px;
-    margin: 20px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
+    margin: 2px;
+    padding:px;
+    
 }
 
 .founder{
@@ -2810,21 +2809,20 @@ input::placeholder{
     align-items: center;
 }
 
-.founder img{
-    
-}
-
-.paragraph{
-    padding: 50px;
+.paragraph p{
+    padding: 5px;
 }
 
 .paragraph h1{
-    padding: 20px;
+    padding: 2px;
 }
 
-.paragraph p{
-    padding: 20px;
+.paragraph{
+    padding: 2px;
+    align-items: center;
 }
+
+
 
 .services{
     font-size: 20px;
