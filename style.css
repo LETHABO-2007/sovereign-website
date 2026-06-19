@@ -570,6 +570,14 @@ input::placeholder{
     padding: 50px;
 }
 
+.paragraph h1{
+    padding: 20px;
+}
+
+.paragraph p{
+    padding: 20px;
+}
+
 .services{
     font-size: larger;
     text-align: center;
