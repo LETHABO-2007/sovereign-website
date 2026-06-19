@@ -71,9 +71,7 @@
                     <img src="assets/images/IMG-20260322-WA0042.jpg" alt="">
                 </div>
         </section>
-        
     </main>
-
 
 <footer class="footer">
          <section>
@@ -94,145 +92,18 @@
                 Address: University of Limpopo, VN Res Manager's House
 
              </p>
-    </footer>
+</footer>
 
-
-<!-- Lightbox (Gallery) -->
-<style>
-  .gl-lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-
-  .gl-lightbox.is-open {
-    display: flex;
-  }
-
-  .gl-lightbox__content {
-    position: relative;
-    max-width: 92vw;
-    max-height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .gl-lightbox__img {
-    max-width: 92vw;
-    max-height: 92vh;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-  }
-
-  .gl-lightbox__close {
-    position: absolute;
-    top: -18px;
-    right: -18px;
-    width: 44px;
-    height: 44px;
-    border-radius: 999px;
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    background: rgba(0, 0, 0, 0.65);
-    color: #fff;
-    cursor: pointer;
-    font-size: 28px;
-    line-height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .gl-lightbox__close:focus {
-    outline: 3px solid rgba(233, 167, 54, 0.6);
-    outline-offset: 2px;
-  }
-
-  @media (max-width: 600px) {
-    .gl-lightbox__close {
-      top: -10px;
-      right: -10px;
-      width: 38px;
-      height: 38px;
-      font-size: 22px;
-      line-height: 32px;
-    }
-  }
-</style>
-
-<div class="gl-lightbox" id="glLightbox" aria-hidden="true" role="dialog" aria-label="Gallery image viewer">
-  <div class="gl-lightbox__content">
-    <button class="gl-lightbox__close" id="glLightboxClose" type="button" aria-label="Close">&times;</button>
-    <img class="gl-lightbox__img" id="glLightboxImg" src="" alt="" />
-  </div>
-</div>
-
-<script>
-  (function () {
-    const lightbox = document.getElementById('glLightbox');
-    const lightboxImg = document.getElementById('glLightboxImg');
-    const closeBtn = document.getElementById('glLightboxClose');
-
-    function openLightboxFromImg(img) {
-      const src = img.getAttribute('src');
-      if (!src) return;
-
-      lightboxImg.src = src;
-      lightboxImg.alt = img.getAttribute('alt') || 'Gallery image';
-
-      lightbox.classList.add('is-open');
-      lightbox.setAttribute('aria-hidden', 'false');
-      closeBtn.focus();
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('is-open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      lightboxImg.src = '';
-    }
-
-    // Click on any gallery thumbnail
-    const thumbs = document.querySelectorAll('.pictures img');
-    thumbs.forEach((thumb) => {
-      // Ensure pointer cursor is used by existing CSS; add click behavior only.
-      thumb.addEventListener('click', function () {
-        openLightboxFromImg(thumb);
-      });
-
-      // Accessibility: allow keyboard activation
-      if (!thumb.hasAttribute('tabindex')) {
-        thumb.setAttribute('tabindex', '0');
-      }
-      thumb.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openLightboxFromImg(thumb);
-        }
-      });
-    });
-
-    // Close button
-    closeBtn.addEventListener('click', closeLightbox);
-
-    // Close when clicking overlay
-    lightbox.addEventListener('click', function (e) {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    // Close on ESC
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
-        closeLightbox();
-      }
-    });
-  })();
-</script>
+    <!-- Lightbox (required by existing JS in index.js) -->
+    <div id="glLightbox" class="gl-lightbox" aria-hidden="true">
+        <div class="gl-lightbox__content">
+            <img id="glLightboxImg" class="gl-lightbox__img" src="" alt="Gallery image">
+            <button id="glLightboxClose" class="gl-lightbox__close" type="button" aria-label="Close lightbox">×</button>
+        </div>
+    </div>
 
 </body>
 
-
 </html>
+
+

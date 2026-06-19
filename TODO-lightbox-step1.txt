@@ -1,0 +1,1 @@
+Added plan-approved lightbox step. See gallery.html edit in next step.
