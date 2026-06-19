@@ -91,6 +91,26 @@ body{
     align-items: center;
 }
 
+.bookings-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.bookings-btn:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
 .bookings{
     color: black;
     text-align: center;
@@ -224,6 +244,7 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .submit-btn {
