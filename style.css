@@ -2479,7 +2479,8 @@ input::placeholder {
     background: transparent;
     border: 1px solid var(--border);
     color: var(--text-muted);
-    width: 100%;
+    width: 20%;
+    border-radius: 5px;
     padding: 13px;
     margin-top: 12px;
 }
@@ -2547,7 +2548,7 @@ input::placeholder {
     color: var(--text-muted);
     border: 1px solid var(--border);
     padding: 6px 14px;
-    font-size: 0.8rem;
+    font-size: 15px;
 }
 
 .logout-btn:hover {
