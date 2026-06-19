@@ -1,3 +1,5 @@
+## Project Name
+THE SOVEREIGN BARBER
 
 ## Description
 The Sovereign Barber is a modern barbershop website that lets customers learn about the barbershop, browse services and the gallery, and book appointments.

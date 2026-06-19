@@ -16,6 +16,13 @@ const backToBookingBtn = document.getElementById('backToBookingBtn');
 const logoutBtn = document.getElementById('logoutBtn');
 const loginError = document.getElementById('loginError');
 
+// Ensure dashboard sections stay hidden by default (unless authorized)
+const initialAuth = sessionStorage.getItem('isAdminAuthorized');
+if (initialAuth !== 'true') {
+    if (typeof adminView !== 'undefined') adminView.classList.add('hidden');
+    if (typeof recordsContainer !== 'undefined') recordsContainer.classList.add('hidden');
+}
+
 // CONFIGURATION: Set the master password for the business owner
 const ADMIN_PASSWORD = "Refiloe123";
 
@@ -130,10 +137,18 @@ function evaluateAdminSession() {
  * Pulls raw payloads from Storage block and updates owner dashboard UI components
  */
 function renderAdministrativeRecords() {
+    // Hard gate: never render booking data unless admin is authorized
+    const isAuthorized = sessionStorage.getItem('isAdminAuthorized');
+    if (isAuthorized !== 'true') {
+        recordsList.innerHTML = '';
+        bookingCountBadge.textContent = '0 Appointments';
+        recordsContainer.classList.add('hidden');
+        return;
+    }
+
     recordsList.innerHTML = '';
     const datasets = JSON.parse(localStorage.getItem('secure_bookings')) || [];
-    
-    // Dynamically tracking total item parameters count badge metric
+
     bookingCountBadge.textContent = `${datasets.length} Appointment${datasets.length !== 1 ? 's' : ''}`;
 
     if (datasets.length === 0) {
@@ -141,7 +156,6 @@ function renderAdministrativeRecords() {
         return;
     }
 
-    // Map rows elements arrays safely out onto lists UI components
     datasets.forEach(record => {
         const li = document.createElement('li');
         li.innerHTML = `
@@ -150,9 +164,14 @@ function renderAdministrativeRecords() {
                 <div><span></span> ${escapeHtml(record.phone)}</div>
                 <div><span></span> ${formatHumanDate(record.date)} at ${record.time}</div>
             </div>
-            <button class="delete-btn" onclick="terminateAppointment(${record.id})">Cancel</button>
+            <button class="delete-btn" type="button" data-appointment-id="${record.id}">Cancel</button>
         `;
         recordsList.appendChild(li);
+    });
+
+    // Bind delete actions only for authorized view
+    recordsList.querySelectorAll('.delete-btn[data-appointment-id]').forEach(btn => {
+        btn.addEventListener('click', () => terminateAppointment(btn.dataset.appointmentId));
     });
 }
 
