@@ -563,6 +563,7 @@ input::placeholder{
 
 .gallery{
     text-align: center;
+    padding: 20px;
 }
 
 .pictures{
@@ -623,6 +624,7 @@ input::placeholder{
 
 .contactname{
     text-align: center;
+    padding: 20px;
 }
 
 .details1{
