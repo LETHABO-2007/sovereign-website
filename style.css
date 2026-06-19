@@ -2766,7 +2766,7 @@ input::placeholder{
 .about{
     font-size: small;
     align-items: center;
-    padding: 15px;
+    padding: 13px;
     display: flex;
     flex-direction:column;
 }
@@ -2910,12 +2910,13 @@ input::placeholder{
 }
 
 .contactname{
+    font-size: 20px;
     text-align: center;
     padding: 20px;
 }
 
 .details1{
-    font-size: larger;
+    font-size: 12px;
     text-align: center;
     padding: 20px;
     justify-content: center;
@@ -2925,7 +2926,7 @@ input::placeholder{
 }
 
 .follow{
-    font-size: larger;
+    font-size: 12px;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -2940,7 +2941,7 @@ input::placeholder{
     padding: 8px 16px;
     border-radius: 4px;
     transition: all 0.3s ease;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .socials{
