@@ -16,15 +16,8 @@ const backToBookingBtn = document.getElementById('backToBookingBtn');
 const logoutBtn = document.getElementById('logoutBtn');
 const loginError = document.getElementById('loginError');
 
-// Ensure dashboard sections stay hidden by default (unless authorized)
-const initialAuth = sessionStorage.getItem('isAdminAuthorized');
-if (initialAuth !== 'true') {
-    if (typeof adminView !== 'undefined') adminView.classList.add('hidden');
-    if (typeof recordsContainer !== 'undefined') recordsContainer.classList.add('hidden');
-}
-
 // CONFIGURATION: Set the master password for the business owner
-const ADMIN_PASSWORD = "Refiloe123";
+const ADMIN_PASSWORD = "admin123";
 
 // --- SYSTEM INITIALIZATION & EVENTS ---
 
@@ -87,7 +80,7 @@ function captureNewAppointment(event) {
     bookingForm.reset();
     
     // Display interactive modal notification sequence
-    successMessage.textContent = `Appointment booked successfully for ${name}!`;
+    successMessage.textContent = `✨ Appointment booked successfully for ${name}!`;
     successMessage.classList.remove('hidden');
     
     // Auto collapse banner following visual threshold completion
@@ -110,7 +103,7 @@ function authorizeAdminAccess(event) {
         evaluateAdminSession();
         passwordInput.value = '';
     } else {
-        loginError.textContent = "Invalid Security Key. Authorization Denied.";
+        loginError.textContent = "🔒 Invalid Security Key. Authorization Denied.";
         loginError.classList.remove('hidden');
         passwordInput.focus();
     }
@@ -137,18 +130,10 @@ function evaluateAdminSession() {
  * Pulls raw payloads from Storage block and updates owner dashboard UI components
  */
 function renderAdministrativeRecords() {
-    // Hard gate: never render booking data unless admin is authorized
-    const isAuthorized = sessionStorage.getItem('isAdminAuthorized');
-    if (isAuthorized !== 'true') {
-        recordsList.innerHTML = '';
-        bookingCountBadge.textContent = '0 Appointments';
-        recordsContainer.classList.add('hidden');
-        return;
-    }
-
     recordsList.innerHTML = '';
     const datasets = JSON.parse(localStorage.getItem('secure_bookings')) || [];
-
+    
+    // Dynamically tracking total item parameters count badge metric
     bookingCountBadge.textContent = `${datasets.length} Appointment${datasets.length !== 1 ? 's' : ''}`;
 
     if (datasets.length === 0) {
@@ -156,6 +141,7 @@ function renderAdministrativeRecords() {
         return;
     }
 
+    // Map rows elements arrays safely out onto lists UI components
     datasets.forEach(record => {
         const li = document.createElement('li');
         li.innerHTML = `
@@ -164,15 +150,22 @@ function renderAdministrativeRecords() {
                 <div><span></span> ${escapeHtml(record.phone)}</div>
                 <div><span></span> ${formatHumanDate(record.date)} at ${record.time}</div>
             </div>
-            <button class="delete-btn" type="button" data-appointment-id="${record.id}">Cancel</button>
+            <button class="delete-btn" onclick="terminateAppointment(${record.id})">Cancel</button>
         `;
         recordsList.appendChild(li);
     });
+}
 
-    // Bind delete actions only for authorized view
-    recordsList.querySelectorAll('.delete-btn[data-appointment-id]').forEach(btn => {
-        btn.addEventListener('click', () => terminateAppointment(btn.dataset.appointmentId));
-    });
+/**
+ * Splices item index key mappings clear from data archives arrays matching structural unique ID parameters
+ */
+function terminateAppointment(id) {
+    if(confirm("Are you sure you want to cancel this booking record?")) {
+        let datasets = JSON.parse(localStorage.getItem('secure_bookings')) || [];
+        datasets = datasets.filter(targetItem => targetItem.id !== id);
+        localStorage.setItem('secure_bookings', JSON.stringify(datasets));
+        renderAdministrativeRecords();
+    }
 }
 
 // --- UTILITY COMPONENT HOOKS ---
@@ -194,7 +187,3 @@ function escapeHtml(string) {
     div.innerText = string;
     return div.innerHTML;
 }
-
-// Gallery lightbox is implemented in a separate file (gallery-lightbox.js)
-// so that it doesn't affect booking/admin pages.
-
