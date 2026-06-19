@@ -447,11 +447,6 @@ input::placeholder {
     to { opacity: 1; transform: translateY(0); }
 }
 
-
-
-
-
-
 .header h1{
     text-align: center;
 }
@@ -617,19 +612,19 @@ input::placeholder{
 
 .gallery{
     text-align: center;
-    padding: 20px;
+    padding: 12px;
 }
 
 .pictures{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
 }
 
 .pictures img{
-    padding: 5px;
-    margin: 10px;
+    padding: 12px;
+    margin: 16px;
     align-items: center;
     border-radius: 20px;
     width: 25rem;
@@ -731,26 +726,14 @@ input::placeholder{
     gap: 20px;
 }
 
-  @media (max-width: 600px) {
-    .gl-lightbox__close {
-      top: -10px;
-      right: -10px;
-      width: 38px;
-      height: 38px;
-      font-size: 22px;
-      line-height: 32px;
-    }
-  }
 @media screen and (max-width: 1300px){
 body{
     font-family: Arial, sans-serif;
-    
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform: scale(0.8);
 }
 
 .logoNAME h1{
@@ -759,7 +742,7 @@ body{
 }
 
 .logo{
-    width: 10rem;
+    width: 9rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -823,8 +806,366 @@ body{
 .header{
     background-color: black;
     color: white;
+    padding: 1px;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookings-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
     padding: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.bookings-btn:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.bookings{
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.bookings h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.bookings h3{
+    text-align: center;
+    padding: 20px;
+}
+
+.bookings-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+:root {
+    --primary:rgb(233, 167, 54) ;         /* Elegant Indigo */
+    --primary-hover: rgb(233, 167, 54);
+    --primary-light: #eeebff;
+    --background: #f8fafc;      /* Pure clean slate background */
+    --card-bg: #ffffff;
+    --text-main: #0f172a;       /* Deep obsidian text */
+    --text-muted: #000000;     /* Slate grey */
+    --border: rgb(241, 193, 109);
+    --border-hover: #cbd5e1;
+    --success: #10b981;         /* Vivid Emerald */
+    --success-bg: #f0fdf4;
+    --danger: #ef4444;          /* Crimson red */
+    --danger-bg: #fef2f2;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+}
+
+.h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.subtitle{
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- Form Architectures --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+/* Input Fields with Icon Integrations */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+input {
+    font-family: inherit;
+    width: 100%;
+    position: relative;
+    padding: 13px 14px 13px 20px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: matrix();
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+/* --- Custom Action Buttons --- */
+.button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.submit-btn {
+    width: 20%;
+    padding: 14px;
     border-radius: 15px;
+    font-size: large;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgb(233, 167, 54);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+    transition: all 0.3s ease;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+}
+
+.secondary-btn:hover {
+    background: #f1f5f9;
+    color: var(--text-main);
+    border-color: var(--border-hover);
+    transition: all 0.3s ease;
+}
+
+/* --- Feedback Banners --- */
+.success-msg {
+    color: var(--success);
+    background-color: rgb(173, 250, 173);
+    border: 1px solid var(--success);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    animation: scaleIn 0.25s ease;
+}
+
+.error-msg {
+    color: var(--danger);
+    background-color: var(--danger-bg);
+    border: 1px solid var(--danger);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 16px;
+    animation: scaleIn 0.25s ease;
+}
+
+/* --- Business Owner Navigation Gateway --- */
+.admin-link-wrapper {
+    margin-top: 32px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    font-size: 5px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.link-btn:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* --- Administrative Layout Engine --- */
+
+.logout-btn {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    font-size: 0.8rem;
+}
+
+.logout-btn:hover {
+    background-color: #e2e8f0;
+    color: var(--text-main);
+}
+
+.records-meta {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.badge {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+/* Records List Structuring */
+.records-list {
+    list-style: none;
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.records-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.records-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.records-list li {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 0.3s ease;
+}
+
+.booking-info strong {
+    display: block;
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.booking-info div {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Row Record Actions */
+.delete-btn {
+    background-color: #ffffff;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.delete-btn:hover {
+    background-color: var(--danger);
+    color: #ffffff;
+    border-color: var(--danger);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.18);
+}
+
+.no-records {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Layout Utility Extensions --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- Animations --- */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .header h1{
@@ -842,12 +1183,6 @@ body{
 .home h1{
     text-align: center;
     padding: 20px;
-}
-
-
-.bookings{
-    color: black;
-    text-align: center
 }
 
 .details{
@@ -929,13 +1264,12 @@ input::placeholder{
     transition: all 0.5s ease;
 }
 
-
 .footer{
     background-color: black;
     color: white;
     text-align: center;
     padding: 2px;
-    border-radius: 15px;
+    border-radius: 1px;
 }
 
 .about{
@@ -967,10 +1301,26 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+}
+
+.founder img{
+    width: 20rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .paragraph{
     padding: 50px;
+}
+
+.paragraph h1{
+    padding: 20px;
+}
+
+.paragraph p{
+    padding: 20px;
 }
 
 .services{
@@ -979,20 +1329,31 @@ input::placeholder{
     padding: 50px;
 }
 
+.services h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.services p{
+    text-align: center;
+    padding: 20px;
+}
+
 .gallery{
     text-align: center;
+    padding: 20px;
 }
 
 .pictures{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2px;
+    gap: 3px;
 }
 
 .pictures img{
-    padding: 2px;
-    margin: 10px;
+    padding: 5px;
+    margin: 2px;
     align-items: center;
     border-radius: 20px;
     width: 20rem;
@@ -1036,11 +1397,12 @@ input::placeholder{
     justify-self: center;
     margin: 20px;
     border: 5px solid white;
-    width: 60rem;
+    width: 80rem;
 }
 
 .contactname{
     text-align: center;
+    padding: 20px;
 }
 
 .details1{
@@ -1092,6 +1454,7 @@ input::placeholder{
     flex-direction: row;
     gap: 20px;
 }
+
 }
 
 @media screen and (max-width: 900px){
@@ -1103,16 +1466,16 @@ input::placeholder{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.6rem;
 }
 
 .logoNAME h1{
     margin: 0;
     line-height: 1;
+    font-size: 20px;
 }
 
 .logo{
-    width: 1rem;
+    width: 9rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -1120,7 +1483,7 @@ input::placeholder{
 }
 
 .logo img{
-    width: 3rem;
+    width: 100%;
     border-radius: 20px;
     transition: all 0.5s ease;
 }
@@ -1140,7 +1503,7 @@ input::placeholder{
     color: white;
     text-decoration: none;
     text-align: center;
-    padding: 8px 16px;
+    padding: 4px 8px;
     border-radius: 4px;
     transition: all 0.5s ease;
 }
@@ -1149,10 +1512,10 @@ input::placeholder{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 12px;
+    gap: 6px;
     font-size: larger;
     text-align: center;
-    padding: 0;
+    padding: 1px;
     margin: 0;
 }
 
@@ -1160,7 +1523,9 @@ input::placeholder{
     color: white;
     text-decoration: none;
     text-align: center;
-    padding: 8px 16px;
+    font-size: 15px;
+    gap: 4px;
+    padding: 4px 8px;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
@@ -1176,9 +1541,372 @@ input::placeholder{
 .header{
     background-color: black;
     color: white;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.bookings-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.bookings-btn:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.bookings{
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.bookings h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.bookings h3{
+    text-align: center;
+    padding: 20px;
+}
+
+.bookings-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+:root {
+    --primary:rgb(233, 167, 54) ;         /* Elegant Indigo */
+    --primary-hover: rgb(233, 167, 54);
+    --primary-light: #eeebff;
+    --background: #f8fafc;      /* Pure clean slate background */
+    --card-bg: #ffffff;
+    --text-main: #0f172a;       /* Deep obsidian text */
+    --text-muted: #000000;     /* Slate grey */
+    --border: rgb(241, 193, 109);
+    --border-hover: #cbd5e1;
+    --success: #10b981;         /* Vivid Emerald */
+    --success-bg: #f0fdf4;
+    --danger: #ef4444;          /* Crimson red */
+    --danger-bg: #fef2f2;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+}
+
+.h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.subtitle{
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- Form Architectures --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+/* Input Fields with Icon Integrations */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+input {
+    font-family: inherit;
+    width: 100%;
+    position: relative;
+    padding: 13px 14px 13px 20px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: matrix();
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+/* --- Custom Action Buttons --- */
+.button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.submit-btn {
+    width: 30%;
+    padding: 14px;
+    border-radius: 15px;
+    font-size: large;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgb(233, 167, 54);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+    transition: all 0.3s ease;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+}
+
+.secondary-btn:hover {
+    background: #f1f5f9;
+    color: var(--text-main);
+    border-color: var(--border-hover);
+    transition: all 0.3s ease;
+}
+
+/* --- Feedback Banners --- */
+.success-msg {
+    color: var(--success);
+    background-color: rgb(173, 250, 173);
+    border: 1px solid var(--success);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    animation: scaleIn 0.25s ease;
+}
+
+.error-msg {
+    color: var(--danger);
+    background-color: var(--danger-bg);
+    border: 1px solid var(--danger);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 16px;
+    animation: scaleIn 0.25s ease;
+}
+
+/* --- Business Owner Navigation Gateway --- */
+.admin-link-wrapper {
+    margin-top: 32px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    font-size: 5px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.link-btn:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* --- Administrative Layout Engine --- */
+
+.logout-btn {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    font-size: 0.8rem;
+}
+
+.logout-btn:hover {
+    background-color: #e2e8f0;
+    color: var(--text-main);
+}
+
+.records-meta {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.badge {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+/* Records List Structuring */
+.records-list {
+    list-style: none;
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.records-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.records-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.records-list li {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 0.3s ease;
+}
+
+.booking-info strong {
+    display: block;
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.booking-info div {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Row Record Actions */
+.delete-btn {
+    background-color: #ffffff;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.delete-btn:hover {
+    background-color: var(--danger);
+    color: #ffffff;
+    border-color: var(--danger);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.18);
+}
+
+.no-records {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Layout Utility Extensions --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- Animations --- */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
 
 .header h1{
     text-align: center;
@@ -1195,12 +1923,6 @@ input::placeholder{
 .home h1{
     text-align: center;
     padding: 20px;
-}
-
-
-.bookings{
-    color: black;
-    text-align: center
 }
 
 .details{
@@ -1282,18 +2004,17 @@ input::placeholder{
     transition: all 0.5s ease;
 }
 
-
 .footer{
     background-color: black;
     color: white;
     text-align: center;
     padding: 2px;
-    border-radius: 15px;
+    border-radius: 1px;
 }
 
 .about{
-    font-size: 1rem;
-    padding: 10px;
+    font-size: larger;
+    padding: 50px;
     display: flex;
     flex-direction:column;
 }
@@ -1310,7 +2031,7 @@ input::placeholder{
 }
 
 .about img{
-    width: 20rem;
+    width: 15rem;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -1323,7 +2044,22 @@ input::placeholder{
 }
 
 .paragraph{
-    padding: 10px;
+    padding: 50px;
+    transition: all 0.5s ease;
+    transform: scale(1.05);
+}
+
+.paragraph:hover{
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.paragraph h1{
+    padding: 20px;
+}
+
+.paragraph p{
+    padding: 20px;
 }
 
 .services{
@@ -1332,8 +2068,19 @@ input::placeholder{
     padding: 50px;
 }
 
+.services h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.services p{
+    text-align: center;
+    padding: 20px;
+}
+
 .gallery{
     text-align: center;
+    padding: 20px;
 }
 
 .pictures{
@@ -1394,6 +2141,7 @@ input::placeholder{
 
 .contactname{
     text-align: center;
+    padding: 20px;
 }
 
 .details1{
@@ -1447,35 +2195,35 @@ input::placeholder{
 }
 }
 
-@media screen and (max-width: 600px){
-.body{
-  font-family: Arial, sans-serif;
-  font-size: 0.8rem;
+@media screen and (max-width: 500px){
+body{
+    font-family: Arial, sans-serif;
     
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 4px;
 }
 
 .logoNAME h1{
     margin: 0;
     line-height: 1;
+    font-size: 0px;
+    color: #000000;
 }
 
 .logo{
-    width: 2rem;
-    border-radius: 2px;
+    width: 120px;
+    margin: 5px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     align-self: center;
-    font-size: 0.5rem;
 }
 
 .logo img{
-    width: 50px;
+    width: 100%;
     border-radius: 20px;
     transition: all 0.5s ease;
 }
@@ -1495,7 +2243,7 @@ input::placeholder{
     color: white;
     text-decoration: none;
     text-align: center;
-    padding: 4px 8px;
+    padding: 2px;
     border-radius: 4px;
     transition: all 0.5s ease;
 }
@@ -1504,16 +2252,18 @@ input::placeholder{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 6px;
-    font-size: larger;
+    gap: 2px;
+    font-size: 10px;
     text-align: center;
+
+
 }
 
 .nav a{
     color: white;
     text-decoration: none;
     text-align: center;
-    padding: 4px 8px;
+    font-size: 12px;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
@@ -1530,7 +2280,372 @@ input::placeholder{
     background-color: black;
     color: white;
     padding: 1px;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookings-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 15px;
+    align-items: center;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.bookings-btn:hover{
+    background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.bookings{
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.bookings h1{
+    font-size: 25px;
+}
+
+.bookings h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.bookings h3{
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.bookings-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+:root {
+    --primary:rgb(233, 167, 54) ;         /* Elegant Indigo */
+    --primary-hover: rgb(233, 167, 54);
+    --primary-light: #eeebff;
+    --background: #f8fafc;      /* Pure clean slate background */
+    --card-bg: #ffffff;
+    --text-main: #0f172a;       /* Deep obsidian text */
+    --text-muted: #000000;     /* Slate grey */
+    --border: rgb(241, 193, 109);
+    --border-hover: #cbd5e1;
+    --success: #10b981;         /* Vivid Emerald */
+    --success-bg: #f0fdf4;
+    --danger: #ef4444;          /* Crimson red */
+    --danger-bg: #fef2f2;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+}
+
+.h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.subtitle{
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- Form Architectures --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+/* Input Fields with Icon Integrations */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+input {
+    font-family: inherit;
+    width: 100%;
+    position: relative;
+    padding: 13px 14px 13px 20px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: matrix();
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+/* --- Custom Action Buttons --- */
+.button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.submit-btn {
+    width: 50%;
+    padding: 8px;
     border-radius: 15px;
+    font-size: large;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgb(233, 167, 54);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+    transition: all 0.3s ease;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+}
+
+.secondary-btn:hover {
+    background: #f1f5f9;
+    color: var(--text-main);
+    border-color: var(--border-hover);
+    transition: all 0.3s ease;
+}
+
+/* --- Feedback Banners --- */
+.success-msg {
+    color: var(--success);
+    background-color: rgb(173, 250, 173);
+    border: 1px solid var(--success);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    animation: scaleIn 0.25s ease;
+}
+
+.error-msg {
+    color: var(--danger);
+    background-color: var(--danger-bg);
+    border: 1px solid var(--danger);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 16px;
+    animation: scaleIn 0.25s ease;
+}
+
+/* --- Business Owner Navigation Gateway --- */
+.admin-link-wrapper {
+    margin-top: 32px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    font-size: 5px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.link-btn:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* --- Administrative Layout Engine --- */
+
+.logout-btn {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    font-size: 0.8rem;
+}
+
+.logout-btn:hover {
+    background-color: #e2e8f0;
+    color: var(--text-main);
+}
+
+.records-meta {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.badge {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+/* Records List Structuring */
+.records-list {
+    list-style: none;
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.records-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.records-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.records-list li {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 0.3s ease;
+}
+
+.booking-info strong {
+    display: block;
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.booking-info div {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Row Record Actions */
+.delete-btn {
+    background-color: #ffffff;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.delete-btn:hover {
+    background-color: var(--danger);
+    color: #ffffff;
+    border-color: var(--danger);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.18);
+}
+
+.no-records {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Layout Utility Extensions --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- Animations --- */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .header h1{
@@ -1538,39 +2653,21 @@ input::placeholder{
 }
 
 .home{
-    margin: 2px;
+    margin: 20px;
 }
-.home{
-    background-image: url(assets/images/IMG-20260321-WA0019.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-}
+
 .home h2{
     text-align: center;
-    font-size: 1rem;
+    font-size: 17px;
 }
 
 .home h1{
     text-align: center;
-    padding: 2px;
-}
-
-.bookings h1{
-    color: black;
-    text-align: center;
-    font-size: 1.5rem;   
-}
-
-.bookings h3{
-    color: black;
-    text-align: center;
-    font-size: 0.8rem;
+    padding: 20px;
 }
 
 .details{
-    font-size: calc(1rem + 1vw);
+    font-size: larger;
     padding: 20px;
 }
 
@@ -1652,34 +2749,57 @@ input::placeholder{
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 5px;
-    padding: 1px;
-    border-radius: 15px;
+    padding: 2px;
+    border-radius: 1px;
+}
 
+.footer h1{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.footer p{
+    font-size: 10px;
+    padding: 10px;
 }
 
 .about{
-    font-size: larger;
-    padding: 3px;
+    font-size: small;
+    align-items: center;
+    padding: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+}
+
+.about2 h1{
+    font-size: 20px;
+}
+
+.about2 p{
+    font-size: 12px;
 }
 
 .about2{
     justify-content: center;
     display: flex;
     flex-direction: row;
-    gap: 1px;
+    gap: 20px;
+}
+
+.about2 h3{
+    font-size: 11px;
 }
 
 .about2 h4 {
     align-self: center;
+    font-size: 12px;
 }
 
 .about img{
     width: 10rem;
-    height: auto;
     border-radius: 15px;
+    margin: 20px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
 }
@@ -1690,45 +2810,64 @@ input::placeholder{
     align-items: center;
 }
 
-.founder h3{
-    font-size: 9px;
-    text-align: center;
-}
-
-.founder h4{
-    font-size: 7px;
+.founder img{
+    
 }
 
 .paragraph{
-    padding: 1px;
-    font-size: 10px;
-}
-
-.services{
-    font-size: 12px;
-    text-align: center;
     padding: 50px;
 }
 
-.gallery{
+.paragraph h1{
+    padding: 20px;
+}
+
+.paragraph p{
+    padding: 20px;
+}
+
+.services{
+    font-size: 20px;
     text-align: center;
+    padding: 20px;
+}
+
+.services h1{
+    font-size: 20px;
+}
+
+.services h2{
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+}
+
+.services p{
+    font-size: 10px;
+    text-align: center;
+    padding: 12px;
+}
+
+.gallery{
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
 }
 
 .pictures{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5px;
 }
 
 .pictures img{
-    padding: 6px;
-    margin: 1px;
+    padding: 2px;
+    margin: 15px;
     align-items: center;
     border-radius: 20px;
-    width: 5rem;
+    width: 8rem;
     transition: all 0.5s ease;
-    margin: 1px;
+    margin: 0px;
     border: 5px solid white;
     cursor: pointer;
 
@@ -1745,11 +2884,6 @@ input::placeholder{
     background-size: cover;
     background-position: center;
     height: 100vh;
-}
-
-.home img{
-    width: 20rem;
-    height: auto;
 }
 
 .contact1{
@@ -1777,11 +2911,11 @@ input::placeholder{
 
 .contactname{
     text-align: center;
-    font-size: 1.5rem;
+    padding: 20px;
 }
 
 .details1{
-    font-size: 1rem;
+    font-size: larger;
     text-align: center;
     padding: 20px;
     justify-content: center;
@@ -1816,10 +2950,6 @@ input::placeholder{
     gap: 5px;
 }
 
-.socials a{
-    font-size: 30px;
-}
-
 .socials a:hover{
     color: rgb(233, 167, 54);
     transition: all 0.3s ease;
@@ -1827,7 +2957,7 @@ input::placeholder{
 }
 
 .socials p{
-    font-size: 1.2rem;
+    font-size: larger;
     justify-content: center;
     display: flex;
     flex-direction: row;
