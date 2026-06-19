@@ -40,4 +40,6 @@ The Sovereign Barber is a modern barbershop website that lets customers learn ab
 - Updated site content and images across Home, Gallery, About, and Contact pages.
 - Improved navbar alignment (logo + navigation links).
 - Refreshed styling for a more consistent layout across pages.
+- Added a modern fullscreen gallery lightbox (dark overlay) with captions, Close + outside-click + Escape to exit, and Next/Previous navigation.
+
 
