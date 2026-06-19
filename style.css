@@ -270,7 +270,8 @@ input::placeholder {
     background: transparent;
     border: 1px solid var(--border);
     color: var(--text-muted);
-    width: 100%;
+    width: 20%;
+    border-radius: 5px;
     padding: 13px;
     margin-top: 12px;
 }
@@ -310,7 +311,7 @@ input::placeholder {
 }
 
 /* --- Business Owner Navigation Gateway --- */
-.admin-link-wrapper {
+.admin-link-wrapper{
     margin-top: 32px;
     text-align: center;
     border-top: 1px solid var(--border);
@@ -334,16 +335,23 @@ input::placeholder {
 /* --- Administrative Layout Engine --- */
 
 .logout-btn {
-    background-color: #f1f5f9;
-    color: var(--text-muted);
-    border: 1px solid var(--border);
-    padding: 6px 14px;
-    font-size: 0.8rem;
+    width: 10%;
+    padding: 14px;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+    transition: all 0.3s ease;
 }
 
 .logout-btn:hover {
-    background-color: #e2e8f0;
-    color: var(--text-main);
+     background-color: white;
+    color: rgb(233, 167, 54);
+    border-radius: 8px;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
 }
 
 .records-meta {
