@@ -4,11 +4,12 @@ const recordsList = document.getElementById('recordsList');
 const successMessage = document.getElementById('successMessage');
 const bookingCountBadge = document.getElementById('bookingCount');
 
-// Multi-View Control Panels
-const clientView = document.getElementById('clientView');
-const adminView = document.getElementById('adminView');
+// Multi-View Control Panels (match bookings.html DOM)
+const businessDashboard = document.getElementById('business-dashboard');
 const adminLoginForm = document.getElementById('adminLoginForm');
 const recordsContainer = document.getElementById('recordsContainer');
+
+const bookingFormContainer = document.getElementById('bookingForm');
 
 // Interface Navigation Buttons
 const goToAdminBtn = document.getElementById('goToAdminBtn');
@@ -25,15 +26,23 @@ const ADMIN_PASSWORD = "admin123";
 bookingForm.addEventListener('submit', captureNewAppointment);
 
 // Router View Navigation Handlers
-goToAdminBtn.addEventListener('click', () => {
-    clientView.classList.add('hidden');
-    adminView.classList.remove('hidden');
-    evaluateAdminSession(); 
+// NOTE: bookings.html uses #business-dashboard + nested sections for admin login & records.
+goToAdminBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Show the business dashboard area
+    businessDashboard.classList.remove('hidden');
+
+    // Booking form remains visible unless we hide it explicitly.
+    // We hide the booking form container so the login is what the user sees.
+    bookingFormContainer.classList.add('hidden');
+
+    evaluateAdminSession();
 });
 
 backToBookingBtn.addEventListener('click', () => {
-    adminView.classList.add('hidden');
-    clientView.classList.remove('hidden');
+    businessDashboard.classList.add('hidden');
+    bookingFormContainer.classList.remove('hidden');
     clearLoginState();
 });
 
@@ -80,7 +89,7 @@ function captureNewAppointment(event) {
     bookingForm.reset();
     
     // Display interactive modal notification sequence
-    successMessage.textContent = `✨ Appointment booked successfully for ${name}!`;
+    successMessage.textContent = `Appointment booked successfully for ${name}!`;
     successMessage.classList.remove('hidden');
     
     // Auto collapse banner following visual threshold completion
@@ -103,7 +112,7 @@ function authorizeAdminAccess(event) {
         evaluateAdminSession();
         passwordInput.value = '';
     } else {
-        loginError.textContent = "🔒 Invalid Security Key. Authorization Denied.";
+        loginError.textContent = "Invalid Security Key. Authorization Denied.";
         loginError.classList.remove('hidden');
         passwordInput.focus();
     }
